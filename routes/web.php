@@ -105,3 +105,19 @@ Route::get('cookie', function (){
 Route::get('json', function (){
     return response()->json(['name' => 'NamDeve', 'state' => 'Develop']);
 });
+
+/*
+ *  Chap 11 - Views
+ */
+
+Route::get('test', function (){
+    return view('test');
+});
+
+Route::get('test2', function (){
+    return view('test2');
+});
+
+Route::get('blade', function (){
+    return view('page', ['name' => 'Nam Deve']);
+});
