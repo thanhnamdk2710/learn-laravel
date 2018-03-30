@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+ *  Chap 5 - Routing
+ */
+
+Route::get('ID/{id}', function ($id){
+   echo 'ID: ' . $id;
+});
+
+Route::get('user/{name?}', function ($name = 'NamDeve'){
+    echo 'Name: ' . $name;
+});
