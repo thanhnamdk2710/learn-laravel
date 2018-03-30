@@ -78,3 +78,10 @@ Route::post('user/register', [
     'uses' => 'UserRegistration@postRegister'
 ]);
 
+/*
+ *  Chap 9 - Cookie
+ */
+
+Route::get('cookie/set', 'CookieController@setCookie');
+
+Route::get('cookie/get', 'CookieController@getCookie');
