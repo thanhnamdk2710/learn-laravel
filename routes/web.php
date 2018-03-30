@@ -110,9 +110,9 @@ Route::get('json', function (){
  *  Chap 11 - Views
  */
 
-Route::get('test', function (){
-    return view('test');
-});
+//Route::get('test', function (){
+//    return view('test');
+//});
 
 Route::get('test2', function (){
     return view('test2');
@@ -120,4 +120,22 @@ Route::get('test2', function (){
 
 Route::get('blade', function (){
     return view('page', ['name' => 'Nam Deve']);
+});
+
+/*
+ *  Chap 12 - Redirect
+ */
+
+Route::get('test', ['as' => 'testing', function (){
+    return view('test2');
+}]);
+
+Route::get('redirect', function (){
+    return redirect()->route('testing');
+});
+
+Route::get('rr', 'RedirectController@index');
+
+Route::get('redirectcontroller', function (){
+    return redirect()->action('RedirectController@index');
 });
