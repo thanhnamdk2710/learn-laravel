@@ -85,3 +85,23 @@ Route::post('user/register', [
 Route::get('cookie/set', 'CookieController@setCookie');
 
 Route::get('cookie/get', 'CookieController@getCookie');
+
+/*
+ *  Chap 10 - Response
+ */
+
+Route::get('basic_response', function (){
+    return 'Hello World';
+});
+
+Route::get('header', function (){
+    return response("Hello", 200)->header('Content-Type', 'text/html');
+});
+
+Route::get('cookie', function (){
+    return response("Hello", 200)->header('Content-Type', 'text/html')->withCookie('name', 'NamDeve');
+});
+
+Route::get('json', function (){
+    return response()->json(['name' => 'NamDeve', 'state' => 'Develop']);
+});
