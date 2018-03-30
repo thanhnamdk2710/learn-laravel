@@ -159,3 +159,11 @@ Route::post('edit/{id}', 'StudUpdateController@edit');
 Route::get('delete-record', 'StudDeleteController@index');
 
 Route::get('delete/{id}', 'StudDeleteController@destroy');
+
+/*
+ *  Chap 15 - Form
+ */
+
+Route::get('/form', function (){
+    return view('form');
+});
