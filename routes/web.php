@@ -26,3 +26,18 @@ Route::get('ID/{id}', function ($id){
 Route::get('user/{name?}', function ($name = 'NamDeve'){
     echo 'Name: ' . $name;
 });
+
+
+/*
+ *  Chap 6 - Middleware
+ */
+
+Route::get('role', [
+    'middleware' => 'Role:editor',
+    'uses' => 'TestController@index',
+]);
+
+Route::get('terminate', [
+    'middleware' => 'terminate',
+    'uses' => 'ABCController@index',
+]);
