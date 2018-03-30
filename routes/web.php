@@ -41,3 +41,25 @@ Route::get('terminate', [
     'middleware' => 'terminate',
     'uses' => 'ABCController@index',
 ]);
+
+/*
+ *  Chap 7 - Controller
+ */
+
+Route::get('profile', [
+    'middleware' => 'auth',
+    'uses' => 'UserController@showProfile'
+]);
+
+Route::get('usercontroller/path', [
+    'middleware' => 'First',
+    'uses' => 'UserController@showPath'
+]);
+
+Route::resource('my', 'MyController');
+
+class MyClass{
+    public $foo = 'bar';
+}
+
+Route::get('myclass', 'ImplicitController@index');
