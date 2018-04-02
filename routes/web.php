@@ -191,3 +191,11 @@ Route::get('session/remove','SessionController@deleteSessionData');
 Route::get('validation','ValidationController@showform');
 
 Route::post('validation','ValidationController@validateform');
+
+/*
+ *  Chap 19 - Upload File
+ */
+
+Route::get('uploadfile','UploadFileController@index');
+
+Route::post('uploadfile','UploadFileController@showUploadFile');
