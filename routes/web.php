@@ -167,3 +167,9 @@ Route::get('delete/{id}', 'StudDeleteController@destroy');
 Route::get('/form', function (){
     return view('form');
 });
+
+/*
+ *  Chap 16 - Localiztion
+ */
+
+Route::get('localization/{locale}','LocalizationController@index');
