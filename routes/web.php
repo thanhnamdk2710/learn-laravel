@@ -183,3 +183,11 @@ Route::get('session/set','SessionController@accessSessionData');
 Route::get('session/get','SessionController@storeSessionData');
 
 Route::get('session/remove','SessionController@deleteSessionData');
+
+/*
+ *  Chap 18 - Validation
+ */
+
+Route::get('validation','ValidationController@showform');
+
+Route::post('validation','ValidationController@validateform');
