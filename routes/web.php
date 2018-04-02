@@ -173,3 +173,13 @@ Route::get('/form', function (){
  */
 
 Route::get('localization/{locale}','LocalizationController@index');
+
+/*
+ *  Chap 17 - Session
+ */
+
+Route::get('session/set','SessionController@accessSessionData');
+
+Route::get('session/get','SessionController@storeSessionData');
+
+Route::get('session/remove','SessionController@deleteSessionData');
